@@ -1,0 +1,30 @@
+.siderAnimation_header{
+    display: inline;
+    animation: sliderAnimation 1500ms 1;
+}
+.sliderAnimation_header_delay1{
+    animation-delay: 150ms;
+}
+.sliderAnimation_header_delay2{
+    animation-delay: 300ms;
+}
+.sliderAnimation_header_delay3{
+    animation-delay: 450ms;
+}
+.sliderAnimation_header_delay4{
+    animation-delay: 600ms;
+}
+
+@keyframes sliderAnimation {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
