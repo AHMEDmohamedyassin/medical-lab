@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 
-const MiddlePart = () => {
+const MiddlePartComp = () => {
     const [menuState , setMenuState] = useState(false)
   return (
     <div className="">
@@ -36,4 +36,4 @@ const MiddlePart = () => {
   )
 }
 
-export default MiddlePart
+export default MiddlePartComp

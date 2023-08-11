@@ -1,12 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
-const SliderPart = () => {
+const SliderPartComp = () => {
     const [middleHeight , setMiddleHeight] = useState(0)
     const [activeSlider , setActiveSlider] = useState(0)
     useEffect(() => {
         setMiddleHeight(window.innerHeight * 2 / 3)
     } , [])
+
 
     const data = [
         {
@@ -34,33 +35,39 @@ const SliderPart = () => {
             setActiveSlider(activeSlider + 1)
         }else if(!inc && activeSlider > 0){
             setActiveSlider(activeSlider - 1)
-        }
+        }else if(inc && activeSlider == data.length - 1 ) setActiveSlider(0)
+        else setActiveSlider(data.length - 1)
     }
 
   return (
-    <div className='w-full bg-gray-500 relative' 
-        style={{
-            height:middleHeight,
-            backgroundImage:'url("https://images.pexels.com/photos/248152/pexels-photo-248152.jpeg?auto=compress&cs=tinysrgb&w=1600")' ,
-            backgroundPosition:'center',
-            backgroundSize:'cover'
-        }}>
-        <div className='absolute top-0 left-0 w-full h-full bg-main2/75 flex justify-between items-center px-6'>
+    <div className='w-full bg-gray-500 relative' style={{height:middleHeight}}>
+
+        {/* dimming div */}
+        <div className='absolute top-0 left-0 w-full h-full bg-main2/75 z-20'></div>
+
+        {/* button div */}
+        <div className='absolute top-2/4 left-0 w-full flex justify-between items-center px-6 z-40'>
             <span onClick={() => clickHandle(true)} className="material-symbols-outlined text-white bg-gray-800 ps-2 pe-4 py-3 text-center hover:cursor-pointer z-40" style={{fontSize:20}}>arrow_forward_ios</span>
-            <span onClick={() => clickHandle(false)} className="material-symbols-outlined text-white bg-gray-800 pe-2 ps-4 py-3 text-center hover:cursor-pointer z-40" style={{fontSize:20}}>arrow_back_ios</span>
+            <span onClick={() => clickHandle(false)} className=" material-symbols-outlined text-white bg-gray-800 pe-2 ps-4 py-3 text-center hover:cursor-pointer z-40" style={{fontSize:20}}>arrow_back_ios</span>
         </div>
 
         {
             data.map((ele , index) => (
-                <>
-                    <div className={`absolute top-0 left-0 w-full h-full flex justify-center items-center gap-y-8 flex-col text-white`}>
+                <div key={index}>
+                    <div className={`absolute h-full w-full top-0 left-0 ${activeSlider == index ? "opacity-100" : "opacity-0"}`}
+                    style={{
+                        backgroundImage:`url("${ele.img}")` ,
+                        backgroundPosition:'center',
+                        backgroundSize:'cover'
+                    }}></div>
+                    <div className={`z-30 absolute top-0 left-0 w-full h-full flex justify-center items-center gap-y-8 flex-col text-white`}>
                         <h1 className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden text-lg lg:text-2xl text-bold`}>{ele.titleA}</h1>
                         <p className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay1 text-3xl lg:text-5xl font-extrabold`}>{ele.titleB}</p>
                         <p className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay2 text-md lg:text-xl text-bold w-4/12 text-center`}>{ele.titleC}</p>
                         <div className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay3 h-6 lg:h-10 w-[1px] bg-white`}></div>
                         <button className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay4 border-[1.5px] border-white py-2 px-4 text-white text-md lg:text-lg font-extrabold hover:text-main hover:bg-white`}>مشاهدة جميع الخدمات</button>
                     </div>
-                </>
+                </div>
             ))
         }
 
@@ -68,4 +75,4 @@ const SliderPart = () => {
   )
 }
 
-export default SliderPart
+export default SliderPartComp

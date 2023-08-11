@@ -1,14 +1,16 @@
 import Link from "next/link";
-import UpperPart from "./components/header/UpperPart";
-import MiddlePart from "./components/header/MiddlePart";
-import SliderPart from "./components/header/SliderPart";
+import SliderPartComp from "./components/public/SliderPartComp";
+import HeaderComp from "./components/header/HeaderComp";
+import HomeAboutComp from "./components/About/HomeAboutComp";
+import HomeServicesComp from "./components/services/HomeServicesComp";
 
 export default function Home() {
   return (
-    <header>
-      <UpperPart/>
-      <MiddlePart/>
-      <SliderPart/>
-    </header>
+    <>
+      <HeaderComp/>
+      <SliderPartComp/>
+      <HomeAboutComp/>
+      <HomeServicesComp/>
+    </>
   )
 }

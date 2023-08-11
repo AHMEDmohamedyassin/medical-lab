@@ -1,6 +1,6 @@
 import React from 'react'
 
-const UpperPart = () => {
+const UpperPartComp = () => {
   return (
     <div className="bg-main py-3 hidden xl:block">
       <div className="max-w-[1170px] mx-auto px-10 flex justify-between items-center">
@@ -38,4 +38,4 @@ const UpperPart = () => {
   )
 }
 
-export default UpperPart
+export default UpperPartComp
