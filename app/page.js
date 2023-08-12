@@ -5,6 +5,7 @@ import HomeAboutComp from "./components/About/HomeAboutComp";
 import HomeServicesComp from "./components/services/HomeServicesComp";
 import ContactHome from "./components/contact/ContactHome";
 import ContactHomeMain from "./components/contact/ContactHomeMain";
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <HomeServicesComp/>
       <ContactHome/>
       <ContactHomeMain/>
+      <Footer/>
     </>
   )
 }

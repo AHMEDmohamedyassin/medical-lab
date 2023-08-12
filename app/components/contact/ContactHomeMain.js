@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactHomeMain = () => {
   return (
-    <div className='w-full lg:mt-20 mb-28 relative lg:h-[750px] h-[2000px] flex flex-col'>
+    <div className='w-full mt-20 mb-28 relative lg:h-[750px]  flex flex-col'>
 
 
         <div className='lg:centering_abs_freeX right-0 w-full lg:w-2/4 h-[540px] lg:h-full' style={{
