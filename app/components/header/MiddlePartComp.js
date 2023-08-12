@@ -11,8 +11,8 @@ const MiddlePartComp = () => {
         {/* larg screen navbar */}
         <nav className="hidden xl:flex justify-start items-center flex-1 text-main2 font-semibold gap-x-2">
             <Link className="header_link relative pe-2 py-8 hover:text-main" href={'/'}>الصفحة الرئيسية</Link>
-            <Link className="header_link relative px-2 py-8 hover:text-main" href={'/'}>الخدمات</Link>
-            <Link className="header_link relative px-2 py-8 hover:text-main" href={'/'}>تواصل معنا</Link>
+            <Link className="header_link relative px-2 py-8 hover:text-main" href={'/services'}>الخدمات</Link>
+            <Link className="header_link relative px-2 py-8 hover:text-main" href={'/contact'}>تواصل معنا</Link>
             <Link className="header_link relative px-2 py-8 hover:text-main" href={'/'}>عنا</Link>
         </nav>
         {/* small screen menu button */}
@@ -28,8 +28,8 @@ const MiddlePartComp = () => {
       {/* small screen menu */}
       <div className="xl:hidden w-11/12 mx-auto flex flex-col justify-start items-start px-4 shadow-lg shadow-sky-100 border-main border-t-[3px]" style={{display:menuState?'flex' : 'none'}}>
         <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/'}>الصفحة الرئيسية</Link>
-        <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/'}>الصفحة الرئيسية</Link>
-        <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/'}>الصفحة الرئيسية</Link>
+        <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/services'}>الخدمات</Link>
+        <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/contact'}>تواصل معنا</Link>
         <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/'}>الصفحة الرئيسية</Link>
       </div>
     </div>

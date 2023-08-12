@@ -6,6 +6,7 @@ import HomeServicesComp from "./components/services/HomeServicesComp";
 import ContactHome from "./components/contact/ContactHome";
 import ContactHomeMain from "./components/contact/ContactHomeMain";
 import Footer from "./components/footer/Footer";
+import FixedEleComp from "./components/public/FixedEleComp";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ContactHome/>
       <ContactHomeMain/>
       <Footer/>
+      <FixedEleComp/>
     </>
   )
 }

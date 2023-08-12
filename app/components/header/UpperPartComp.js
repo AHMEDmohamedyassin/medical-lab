@@ -1,4 +1,5 @@
 import React from 'react'
+import SocialMediaComp from '../public/SocialMediaComp'
 
 const UpperPartComp = () => {
   return (
@@ -7,12 +8,14 @@ const UpperPartComp = () => {
     
         <div className="flex justify-between items-center gap-x-4">
     
-          <div className="flex justify-between items-center gap-x-2 border-e-[1px] border-sky-300 pe-4">
-            <img src="/icon/instegram.svg" className="w-4 h-4" />
-            <img src="/icon/instegram.svg" className="w-4 h-4" />
-            <img src="/icon/instegram.svg" className="w-4 h-4" />
-            <img src="/icon/instegram.svg" className="w-4 h-4" />
-          </div>
+              <div className="flex justify-between items-center gap-x-2 px-1">
+                <img src="/icon/instegram.svg" className="w-4 h-4" />
+                <img src="/icon/instegram.svg" className="w-4 h-4" />
+                <img src="/icon/instegram.svg" className="w-4 h-4" />
+                <img src="/icon/instegram.svg" className="w-4 h-4" />
+              </div>
+
+          <div className='h-4 w-[1px] bg-white'></div>
     
           <div  className="flex justify-between items-center text-white text-sm font-semibold gap-2">
             <span className="material-symbols-outlined" style={{fontSize:18}}>schedule</span>

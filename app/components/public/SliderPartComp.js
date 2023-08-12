@@ -8,6 +8,13 @@ const SliderPartComp = () => {
         setMiddleHeight(window.innerHeight * 2 / 3)
     } , [])
 
+    useEffect(() => {
+        const interval = setInterval(() =>{ 
+            clickHandle(true) 
+        }, 5000)
+        return () => clearInterval(interval)
+    } , [activeSlider])
+
 
     const data = [
         {
@@ -37,6 +44,8 @@ const SliderPartComp = () => {
             setActiveSlider(activeSlider - 1)
         }else if(inc && activeSlider == data.length - 1 ) setActiveSlider(0)
         else setActiveSlider(data.length - 1)
+
+        return true;
     }
 
   return (

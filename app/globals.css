@@ -5,6 +5,11 @@
 *{
     transition: 0.3s;
 }
+
+.shadowCustom{
+    box-shadow: 0 0 10px 1px #ddd ;
+}
+
 /* header */
 .header_link::after{
     content: '';
