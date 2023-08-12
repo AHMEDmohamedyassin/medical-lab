@@ -3,6 +3,8 @@ import SliderPartComp from "./components/public/SliderPartComp";
 import HeaderComp from "./components/header/HeaderComp";
 import HomeAboutComp from "./components/About/HomeAboutComp";
 import HomeServicesComp from "./components/services/HomeServicesComp";
+import ContactHome from "./components/contact/ContactHome";
+import ContactHomeMain from "./components/contact/ContactHomeMain";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <SliderPartComp/>
       <HomeAboutComp/>
       <HomeServicesComp/>
+      <ContactHome/>
+      <ContactHomeMain/>
     </>
   )
 }

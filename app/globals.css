@@ -27,3 +27,11 @@
     left: 50%;
     transform : translate(-50% , -50%)
 }
+@layer components{
+    .centering_abs_freeX{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+}

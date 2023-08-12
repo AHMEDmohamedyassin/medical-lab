@@ -6,10 +6,10 @@ const ServicesCardComp = () => {
 
   return (
 
-    <div onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} className='h-[380px]'>
+    <div onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)} className='h-[380px] w-[30%]'>
         <div className='flex flex-col items-center justify-start shadow-md shadow-sky-200 rounded-md overflow-hidden w-full h-full'>
             <div className='h-2/4 w-full relative' style={{
-                    backgroundImage : `url('/a.png')`,
+                    backgroundImage : `url('https://images.pexels.com/photos/3825379/pexels-photo-3825379.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
                     backgroundPosition:'center',
                     backgroundSize:'cover',
                     scale: active ? 1.1 : 1
