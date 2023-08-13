@@ -21,7 +21,7 @@
     background:#3368c6;
     transition: 0.5s;
 }
-.header_link:hover::after{
+.header_link:hover::after , .header_link:focus::after{
     width: 100%;
 }
 
