@@ -22,7 +22,9 @@ const MiddlePartComp = () => {
         </div>
         {/* logo div */}
         <div className="flex-1 flex justify-end items-center">
-          <Link className="" href={"/"}>logo</Link>
+          <Link className="" href={"/"}>
+            <img src='/icon/logo.svg' />
+          </Link>
         </div>
       </div>
       {/* small screen menu */}

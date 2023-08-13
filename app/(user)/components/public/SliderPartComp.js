@@ -72,7 +72,7 @@ const SliderPartComp = () => {
                     <div className={`z-30 absolute top-0 left-0 w-full h-full flex justify-center items-center gap-y-8 flex-col text-white`}>
                         <h1 className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden text-lg lg:text-2xl text-bold`}>{ele.titleA}</h1>
                         <p className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay1 text-3xl lg:text-5xl font-extrabold`}>{ele.titleB}</p>
-                        <p className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay2 text-md lg:text-xl text-bold w-4/12 text-center`}>{ele.titleC}</p>
+                        <p className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay2 text-sm lg:text-xl text-bold lg:w-4/12 w-3/4 text-center`}>{ele.titleC}</p>
                         <div className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay3 h-6 lg:h-10 w-[1px] bg-white`}></div>
                         <button className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay4 border-[1.5px] border-white py-2 px-4 text-white text-md lg:text-lg font-extrabold hover:text-main hover:bg-white`}>مشاهدة جميع الخدمات</button>
                     </div>
