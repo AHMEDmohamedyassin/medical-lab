@@ -23,7 +23,7 @@ const MiddlePartComp = () => {
         {/* logo div */}
         <div className="flex-1 flex justify-end items-center">
           <Link className="" href={"/"}>
-            <img src='/icon/logo.svg' />
+            <img className="w-32" src='/icon/logo.svg' />
           </Link>
         </div>
       </div>
