@@ -45,10 +45,8 @@ const HomeAboutComp = () => {
                 backgroundPosition:'center',
                 backgroundSize:'cover'
             }}>
-                <div className='absolute top-2/4 xl:left-3/4 left-0 w-[177px] h-[235px] bg-main text-white flex justify-center items-center flex-col gap-y-4'>
-                    <span className="material-symbols-outlined" style={{fontSize:50}}>ecg_heart</span>
-                    <h1 className='text-2xl font-bold'>45 سنة</h1>
-                    <p className='font-semibold text-md'>خبرة المعمل</p>
+                <div className='absolute top-2/4 xl:left-[300px] left-0 h-[177px] w-[235px] bg-main text-white flex justify-center items-center flex-col gap-y-4'>
+                    <img src='/icon/logo.svg' />
                     <div className='absolute top-0 left-0 w-full h-full flex justify-between flex-col items-center'>
                         <div className='w-full flex justify-between items-center'>
                             <span className="material-symbols-outlined -rotate-45" style={{fontSize:40}}>chevron_right</span>

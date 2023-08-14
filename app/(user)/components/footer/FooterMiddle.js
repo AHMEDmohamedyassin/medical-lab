@@ -23,9 +23,9 @@ const FooterMiddle = () => {
 
             <div className='h-[200px] w-[1px] bg-gray-300 hidden lg:inline'></div>
 
-            <div>
+            <Link href={'/'}>
                 <img className='w-48 md:w-64' src='/icon/logo.svg' />
-            </div>
+            </Link>
         </div>
         <div className='w-full h-[1px] bg-gray-300 '></div>
     </>

@@ -74,8 +74,6 @@ const SliderPartComp = () => {
                         <h1 className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden text-lg lg:text-2xl text-bold`}>{ele.titleA}</h1>
                         <p className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay1 text-3xl lg:text-5xl font-extrabold`}>{ele.titleB}</p>
                         <p className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay2 text-sm lg:text-xl text-bold lg:w-4/12 w-3/4 text-center`}>{ele.titleC}</p>
-                        <div className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay3 h-6 lg:h-10 w-[1px] bg-white`}></div>
-                        <Link href={'/services'} className={`${activeSlider == index ? 'siderAnimation_header' : null } hidden sliderAnimation_header_delay4 border-[1.5px] border-white py-2 px-4 text-white text-md lg:text-lg font-extrabold hover:text-main hover:bg-white hover:cursor-pointer`}>مشاهدة جميع الخدمات</Link>
                     </div>
                 </div>
             ))

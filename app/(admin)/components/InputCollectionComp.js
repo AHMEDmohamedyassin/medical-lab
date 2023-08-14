@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef, useState } from 'react'
 
-const InputCollectionComp = ({children , title , addable , addablePlaceholderTitle , addablePlaceholderValue , setData}) => {
+const InputCollectionComp = ({children , title , addable , addablePlaceholderTitle , addablePlaceholderValue , clickEvent}) => {
   const mainDiv = useRef(null)
   const [inputCount , setInputCount] = useState(0)
 
@@ -9,6 +9,7 @@ const InputCollectionComp = ({children , title , addable , addablePlaceholderTit
     let data = {}
     mainDiv.current.querySelectorAll('input').forEach(element => {
       if(!element.value) return
+      if(element.type == 'file') return
 
       // if(mainDiv.current.querySelectorAll(`input[name="${element.name}"]`).length == 1)
       //   return data[element.name] = element.value
@@ -20,7 +21,8 @@ const InputCollectionComp = ({children , title , addable , addablePlaceholderTit
       else data[element.name] = [element.value]
     });
 
-    if(setData) setData(data)
+    if(clickEvent)
+      clickEvent(data)
   }
 
   return (

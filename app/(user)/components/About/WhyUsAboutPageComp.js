@@ -27,17 +27,17 @@ const WhyUsAboutPageComp = () => {
               <div className=' h-28 w-[1px] bg-gray-300 hidden sm:inline'></div>
 
               <div className='flex flex-col items-center justify-between h-32'>
-                <span class="material-symbols-outlined" style={{fontSize:60}}>update</span>
-                <h2 className='font-bold text-xl'>8 / 24</h2>
-                <h2 className='font-bold text-lg'>دعم فني</h2>
+                <span class="material-symbols-outlined" style={{fontSize:60 , rotate:'45deg'}}>genetics</span>
+                <h2 className='font-bold text-xl'>سرعة</h2>
+                <h2 className='font-bold text-lg'>في العمل</h2>
               </div>
 
               <div className='h-28 w-[1px] bg-gray-300  hidden sm:inline'></div>
 
               <div className='flex flex-col items-center justify-between h-32'>
-                <span class="material-symbols-outlined" style={{fontSize:60}}>update</span>
-                <h2 className='font-bold text-xl'>8 / 24</h2>
-                <h2 className='font-bold text-lg'>دعم فني</h2>
+                <span class="material-symbols-outlined" style={{fontSize:60}}>science</span>
+                <h2 className='font-bold text-xl'>دقة</h2>
+                <h2 className='font-bold text-lg'>في النتائج</h2>
               </div>
 
             </div>

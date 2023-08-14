@@ -3,7 +3,7 @@ import PageContainerComp from '../../components/PageContainerComp'
 
 const page = () => {
   return (
-    <PageContainerComp title={'الخدمات'}>
+    <PageContainerComp title={'الفروع'}>
       <div className='flex flex-col gap-y-4 w-full px-2 '>
         
         <div href={'/dashboard'} className='flex justify-between items-center border-[1px] hover:border-dsh hover:cursor-pointer p-4 w-full bg-white rounded text-dsh'>

@@ -48,6 +48,19 @@ const SideMenu = () => {
 
         <div className="w-full px-6 py-2 relative">
           <div onClick={clickHandle} className="flex justify-start items-center gap-x-2 text-[#687384] hover:text-[#fff] hover:cursor-pointer w-full title_div">
+            <span className="material-symbols-outlined text-inherit">pin_drop</span>
+            <div className="hidden lg:block text-lg text-inherit">الفروع</div>
+          </div>
+          <div className="max-lg:absolute top-0 right-16 max-lg:bg-[#303844] max-lg:w-48 flex flex-col items-start justify-start gap-y-2 ps-6 overflow-hidden h-0 large_sub_list">
+            <br className='my-1'/>
+            <Link href={'/dashboard/places'} className="text-[#687384] hover:text-[#fff]">جميع الفروع</Link>
+            <Link href={'/dashboard/places/create'} className="text-[#687384] hover:text-[#fff]">إنشاء فرع</Link>
+            <br className='my-1'/>
+          </div>
+        </div>
+
+        <div className="w-full px-6 py-2 relative">
+          <div onClick={clickHandle} className="flex justify-start items-center gap-x-2 text-[#687384] hover:text-[#fff] hover:cursor-pointer w-full title_div">
             <span className="material-symbols-outlined text-inherit">medical_services</span>
             <div className="hidden lg:block text-lg text-inherit">الخدمات</div>
           </div>

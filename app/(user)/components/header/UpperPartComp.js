@@ -32,7 +32,7 @@ const UpperPartComp = () => {
             <span className="material-symbols-outlined" style={{fontSize:18}}>mail</span>
           </div>
           <div className="flex items-center justify-between gap-2">
-            <a className="text-inherit" href="/">01033404523</a>
+            <a className="text-inherit" href="tel:000-723-123-21">01033404523</a>
             <span className="material-symbols-outlined" style={{fontSize:18}}>call</span>
           </div>
         </div>
