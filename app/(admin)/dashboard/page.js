@@ -1,8 +1,12 @@
+'use client'
 import React from 'react'
+import PageContainerComp from '../components/PageContainerComp'
 
 const page = () => {
   return (
-    <div>page</div>
+    <PageContainerComp title={'الصفحةالرئيسية'}>
+
+    </PageContainerComp>
   )
 }
 

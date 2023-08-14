@@ -1,3 +1,15 @@
+.display_flex{
+    display: flex;
+}
+
+.display_block{
+    display: block;
+}
+
+.display_none{
+    display: none;
+}
+
 .siderAnimation_header{
     display: inline;
     animation: sliderAnimation 1500ms 1;

@@ -34,27 +34,27 @@ const SideMenu = () => {
 
         <Link href={'/dashboard/about'} className="w-full px-6 py-2 relative">
           <div onClick={clickHandle} className="flex justify-start items-center gap-x-2 text-[#687384] hover:text-[#fff] hover:cursor-pointer w-full title_div">
-            <span className="material-symbols-outlined text-inherit">dashboard</span>
+            <span className="material-symbols-outlined text-inherit">info</span>
             <div className="hidden lg:block text-lg text-inherit">معلومات عنا</div>
           </div>
         </Link>
 
         <Link href={'/dashboard/contact'} className="w-full px-6 py-2 relative">
           <div onClick={clickHandle} className="flex justify-start items-center gap-x-2 text-[#687384] hover:text-[#fff] hover:cursor-pointer w-full title_div">
-            <span className="material-symbols-outlined text-inherit">dashboard</span>
+            <span className="material-symbols-outlined text-inherit">phone_in_talk</span>
             <div className="hidden lg:block text-lg text-inherit">معلومات التواصل</div>
           </div>
         </Link>
 
         <div className="w-full px-6 py-2 relative">
           <div onClick={clickHandle} className="flex justify-start items-center gap-x-2 text-[#687384] hover:text-[#fff] hover:cursor-pointer w-full title_div">
-            <span className="material-symbols-outlined text-inherit">dashboard</span>
+            <span className="material-symbols-outlined text-inherit">medical_services</span>
             <div className="hidden lg:block text-lg text-inherit">الخدمات</div>
           </div>
           <div className="max-lg:absolute top-0 right-16 max-lg:bg-[#303844] max-lg:w-48 flex flex-col items-start justify-start gap-y-2 ps-6 overflow-hidden h-0 large_sub_list">
             <br className='my-1'/>
-            <Link href={'/dashboard/services'} className="text-[#687384] hover:text-[#fff]">المنتجات</Link>
-            <Link href={'/dashboard/services/create'} className="text-[#687384] hover:text-[#fff]">إنشاء منتج</Link>
+            <Link href={'/dashboard/services'} className="text-[#687384] hover:text-[#fff]">جميع الخدمات</Link>
+            <Link href={'/dashboard/services/create'} className="text-[#687384] hover:text-[#fff]">إنشاء خدمة</Link>
             <br className='my-1'/>
           </div>
         </div>
