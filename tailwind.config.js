@@ -15,6 +15,7 @@ module.exports = {
       colors:{
         main : '#3368c6',
         main2: '#18336c',
+        dsh : '#242a33',
       }
     },
   },

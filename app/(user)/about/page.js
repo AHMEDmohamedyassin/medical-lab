@@ -1,7 +1,4 @@
 import React from 'react'
-import HeaderComp from '../components/header/HeaderComp'
-import Footer from '../components/footer/Footer'
-import FixedEleComp from '../components/public/FixedEleComp'
 import PageTitleComp from '../components/public/PageTitleComp'
 import HomeAboutComp from '../components/About/HomeAboutComp'
 import WhyUsAboutPageComp from '../components/About/WhyUsAboutPageComp'

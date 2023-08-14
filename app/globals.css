@@ -6,6 +6,10 @@
     transition: 0.3s;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .shadowCustom{
     box-shadow: 0 0 10px 1px #ddd ;
 }

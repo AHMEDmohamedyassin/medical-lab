@@ -12,19 +12,19 @@ const ContactHome = () => {
         <div className='absolute top-0 left-0 w-full h-full bg-main2/75'></div> {/*  dimming div */}
         <div className='flex justify-center items-center flex-wrap lg:flex-nowrap gap-6 w-full z-30 relative'>
 
-            <div className='flex justify-center items-center w-full lg:w-auto bg-white py-4 px-8 gap-6'>
-                <span className="material-symbols-outlined text-main" style={{fontSize:60}}>call</span>
+            <div className='flex justify-center items-center w-full lg:w-auto bg-white py-4  px-2 lg:px-8 gap-6'>
+                <span className="material-symbols-outlined text-main" style={{fontSize:50}}>call</span>
                 <div className='flex items-center justify-center flex-col'>
-                    <p className='text-2xl text-main font-extrabold mb-4'>أفضل خدمة معامل</p>
-                    <p className='text-2xl font-semibold text-main2'>01066404523</p>
+                    <p className='text-lg lg:text-2xl text-main font-extrabold mb-4'>أفضل خدمة معامل</p>
+                    <p className='text-lg lg:text-2xl font-semibold text-main2'>01066404523</p>
                 </div>
             </div>
 
-            <div className='flex justify-center items-center w-full lg:w-auto bg-white py-4 px-8 gap-6'>
-                <span className="material-symbols-outlined text-main" style={{fontSize:60}}>call</span>
+            <div className='flex justify-center items-center w-full lg:w-auto bg-white py-4 px-2 lg:px-8 gap-6'>
+                <span className="material-symbols-outlined text-main" style={{fontSize:50}}>call</span>
                 <div className='flex items-center justify-center flex-col'>
-                    <p className='text-2xl text-main font-extrabold mb-4'>أفضل خدمة معامل</p>
-                    <p className='text-2xl font-semibold text-main2'>01066404523</p>
+                    <p className='text-lg lg:text-2xl text-main font-extrabold mb-4'>أفضل خدمة معامل</p>
+                    <p className='text-lg lg:text-2xl font-semibold text-main2'>01066404523</p>
                 </div>
             </div>
 

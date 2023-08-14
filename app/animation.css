@@ -28,3 +28,23 @@
         opacity: 1;
     }
 }
+
+
+/*******dashboard*********/
+.side_menu_main_link_background{
+    background: #303844;
+}
+.side_menu_main_link{
+    color: #fff;
+}
+.side_menu_sub_link{
+    height: auto;
+}
+
+.multiselect_dashboard{
+    overflow: hidden;
+    height: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+}

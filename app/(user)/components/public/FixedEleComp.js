@@ -1,12 +1,13 @@
 'use client'
-import React, {useState } from 'react'
+import React from 'react'
 
 const FixedEleComp = () => {
-    const [visible , setVisible] = useState(false)
     const clickHandle = () => {
         window.scrollTo({
-            top : 0 , left : 0 , behavior : 'smooth'
-        })
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
     }
   return (
     <div>

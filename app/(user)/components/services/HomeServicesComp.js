@@ -17,8 +17,9 @@ const HomeServicesComp = () => {
   const [count , setCount] = useState(1)
   useEffect(() => {
     const width = window.innerWidth
-    if(width > 1170 && width < 1800) setCount(2)
-    if(width > 1800) setCount(3)
+    if(width < 1170 && width > 700 ) setCount(2)
+    if(width > 1170 && width < 1800) setCount(3)
+    if(width > 1800) setCount(4)
   } , []) 
 
   return (
@@ -30,16 +31,12 @@ const HomeServicesComp = () => {
           <p className='text-main2 text-md font-light'>فريقنا الممتاز جاهز ليكون جزءًا من فريقك للعمل في مجالات التشخيص المختلفة. العلماء يساعدون المجتمع من أجل حياة أفضل</p>
         </div>
 
-        {/* <div className='w-full xl:w-[1170px] my-10 py-2 flex justify-center items-start gap-x-6 '>
-          <ServicesCardComp/>
-        </div> */}
-
-        <div className='w-full xl:w-[1170px] px-10'>
+        <div className='w-full xl:w-[1170px]'>
 
             <Swiper
                 effect={'Coverflow'}
                 grabCursor={true}
-                centeredSlides={true}
+                centeredSlides={false}
                 loop={true}
                 slidesPerView={count}
                 spaceBetween={50}
