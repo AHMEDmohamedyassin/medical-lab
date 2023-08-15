@@ -5,10 +5,6 @@ import { randomName } from './methods'
 
 const dashboardMainHook = () => {
     
-    const [aboutImg , setAboutImg] = useState(null)
-    const [contactImg , setContactImg] = useState(null)
-    const [servicesImg , setServicesImg] = useState(null)
-    
     const [allSliders , setAllSlider] = useState([])
     const [slide_imgs , setSlide_imgs] = useState(null)
 
@@ -18,6 +14,8 @@ const dashboardMainHook = () => {
         const img_path = `/sliders/images/${randomName}.jpg`
         const file_path = `/sliders/files/${randomName}.json`
         data.img = img_path
+
+        console.log(data)
 
         toast.info('حاري إرسال البيانات ...')
 
@@ -35,37 +33,14 @@ const dashboardMainHook = () => {
         }
     }
 
-    const imgUploadHandle = async (val) => {
-        
-        const repeated = async (img) => {
-            if(img.length < 1 ) return toast.error('لايوجد صورة لإرسالها')
-            toast.info('جاري إرسال الصورة')
-            await uploadFile(`/images/${val}_page_image.jpg` , img[0])
-            return toast.success('تم إرسال الصورة بنجاح')
-        }
-
-        try{
-
-            if(val == 'about'){
-                return await repeated(aboutImg)
-            }else if(val == 'service'){
-                return await repeated(servicesImg)
-            }else if(val == 'contact'){
-                return await repeated(contactImg)
-            }
-
-        }catch(e){
-            console.log(e)
-            return error_handle()
-        }
-    }
-
     async function get_sliders () {
         const res = await listFiles_url('/sliders/files')
+        let data = []
         for(const url of res){
             const content = await getFile_content(url)
-            setAllSlider([ ...allSliders , {title : content.data_B}])
+            data.push({title : content.data_B})
         }
+        setAllSlider(data)
     } 
 
     useEffect(() => {
@@ -73,7 +48,7 @@ const dashboardMainHook = () => {
     } , [])
     
 
-    return {setSlide_imgs , clickEvent , setServicesImg , setContactImg , setAboutImg , imgUploadHandle , allSliders} 
+    return {setSlide_imgs , clickEvent , allSliders } 
 }
 
 export default dashboardMainHook

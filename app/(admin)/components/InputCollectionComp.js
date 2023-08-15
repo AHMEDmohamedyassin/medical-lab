@@ -1,11 +1,13 @@
 'use client'
+import { uploadingString } from '@/app/firebase/storage'
 import React, { useRef, useState } from 'react'
+import { toast } from 'react-toastify'
 
-const InputCollectionComp = ({children , title , addable , addablePlaceholderTitle , addablePlaceholderValue , clickEvent}) => {
+const InputCollectionComp = ({children , title , path , addable , addablePlaceholderTitle , addablePlaceholderValue , clickHandling}) => {
   const mainDiv = useRef(null)
   const [inputCount , setInputCount] = useState(0)
 
-  const clickHandle = () => {
+  const clickHandle = async () => {
     let data = {}
     mainDiv.current.querySelectorAll('input').forEach(element => {
       if(!element.value) return
@@ -17,7 +19,19 @@ const InputCollectionComp = ({children , title , addable , addablePlaceholderTit
       else data[element.name] = [element.value]
     });
 
-    console.log(data)
+    if(Object.keys(data).length < 1) return toast.error('لا يوجد بيانات لإرسالها')
+
+    if(clickHandling)
+      return clickHandling(data)
+
+    toast.info('حاري إرسال البيانات ...')
+    try{
+      await uploadingString(path , data)
+      toast.success('تم إرسال البيانات')
+    }catch(e){
+      console.log(e)
+      toast.error('حدثت مشكلة ما')
+    }
   }
 
   return (

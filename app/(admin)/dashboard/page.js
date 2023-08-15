@@ -9,12 +9,14 @@ import ImageForm from '../components/ImageForm'
 
 const page = () => {
 
-  const {setSlide_imgs , clickEvent , setServicesImg , setContactImg , setAboutImg , imgUploadHandle , allSliders} = dashboardMainHook()
+  const {setSlide_imgs , clickEvent , allSliders} = dashboardMainHook()
 
   return (
     <PageContainerComp title={'الصفحةالرئيسية'}>
-        <InputCollectionComp clickEvent={clickEvent} title={'بيانات الشرائح'}>
-          <ImageInputs title={'صورة'} number={1} setImgs={setSlide_imgs} />
+
+        <ImageInputs title={'صورة الشرائح'} number={1} setImgs={setSlide_imgs} />
+
+        <InputCollectionComp clickHandling={clickEvent} title={'بيانات الشرائح'}>
           <InputComp name={'data_A'} label={'عنوان 1'} />
           <InputComp name={'data_B'} label={'عنوان 2'} />
           <InputComp name={'data_C'} label={'وصف'} />
@@ -22,7 +24,7 @@ const page = () => {
 
         {
           allSliders.length ? (
-            <div className='flex flex-col gap-4 w-full'>
+            <div className='flex flex-col gap-4 w-full mb-10'>
               <div className='text-sky-500 text-lg'>الشرائح</div>
               
               {
@@ -38,8 +40,6 @@ const page = () => {
           ) : null
         }
 
-      <div className='my-10'></div>
-      
       <PageContainerComp title={'صور الموقع'}>
         <div className='flex flex-wrap justify-start items-center gap-6'>
             <ImageForm title={'صورة خدماتنا'} path={'/images/service_page_image.jpg'} />

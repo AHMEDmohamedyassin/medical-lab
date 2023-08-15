@@ -10,10 +10,10 @@ const page = () => {
 
   return (
       <PageContainerComp title={'معلومات عنا'}>
-        <ImageForm title={'صورة رقم رئيسية'} path={'/about/image_1'} />
-        <ImageForm title={'صورة رقم فرعية'} path={'/about/image_2'} />
+        <ImageForm title={'صورة رئيسية'} path={'/about/image_1.jpg'} />
+        <ImageForm title={'صورة فرعية'} path={'/about/image_2.jpg'} />
 
-        <InputCollectionComp title={'البيانات'} >
+        <InputCollectionComp title={'البيانات'} path={'/about/file.json'} >
           <InputComp name={'data_A'} label={'العنوان الرئيسي'} />
           <InputComp name={'data_B'} label={'الوصف'} />
           <InputComp name={'data_C'} label={'عنوان فرعي'} />
@@ -22,7 +22,7 @@ const page = () => {
           <InputComp name={'data_F'} label={'وصف المميزات'} />
           <InputComp name={'data_G'} label={'عدد ساعات العمل'} />
         </InputCollectionComp>
-        
+
       </PageContainerComp>
   )
 }
