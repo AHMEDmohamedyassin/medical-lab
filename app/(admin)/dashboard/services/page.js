@@ -2,9 +2,10 @@
 import React, { useEffect } from 'react'
 import PageContainerComp from '../../components/PageContainerComp'
 import servicesHook from '../../hooks/servicesHook'
+import Loading from '../../loading'
 
 const page = () => {
-  const {services , get_services} = servicesHook()
+  const {services , get_services , loading_state} = servicesHook()
 
   useEffect(() =>{ 
     get_services() 
@@ -22,6 +23,10 @@ const page = () => {
             </div>
           ) )
         }
+
+      {
+        loading_state? <Loading/> : null
+      }
         
       </div>
     </PageContainerComp>

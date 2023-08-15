@@ -1,9 +1,10 @@
 'use client'
 import PageContainerComp from '../../components/PageContainerComp'
 import placesHook from '../../hooks/placesHook'
+import Loading from '../../loading'
 
 const page = () => {
-  const {places} = placesHook()
+  const {places , loading_state} = placesHook()
   return (
     <PageContainerComp title={'الفروع'}>
       <div className='flex flex-col gap-y-4 w-full px-2 '>
@@ -18,6 +19,10 @@ const page = () => {
         }
         
       </div>
+      {
+        loading_state? <Loading/> : null
+      }
+      
     </PageContainerComp>
   )
 }

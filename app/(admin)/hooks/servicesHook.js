@@ -7,6 +7,7 @@ const servicesHook = () => {
     const [name , setName] = useState(randomName)
     const [imgs , setImgs] = useState([])
     const [services , setServices] = useState([])
+    const [loading_state , setLoading_state] = useState(false)
   
   
     const clickHandle = async (data) => {
@@ -29,16 +30,18 @@ const servicesHook = () => {
     }
 
     async function get_services () {
+      setLoading_state(true)
       const res = await listFiles_url('/services/files')
       let data = []
       for(const url of res){
-          const content = await getFile_content(url)
-          data.push({title : content.title})
+        const content = await getFile_content(url)
+        data.push({title : content.title})
       }
       setServices(data)
+      setLoading_state(false)
   } 
 
-  return {setImgs , clickHandle , name , services , get_services}
+  return {setImgs , clickHandle , name , services , get_services , loading_state}
 }
 
 export default servicesHook
