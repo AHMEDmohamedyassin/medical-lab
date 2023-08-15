@@ -17,7 +17,7 @@ export async function uploadFile (path , file) {
 export async function uploadingString (path , string){
     try{
         const refer = ref(storage , path)
-        const res = await uploadString(refer , string)
+        const res = await uploadString(refer , JSON.stringify(string))
         return true
     }catch(e){
         console.log(e)
@@ -38,15 +38,17 @@ export async function deleteFile(path){
     }
 }
 
-export async function listFiles(path){
+export async function listFiles_url(path){
     try{
         const refer = ref(storage , path)
         const res = await listAll(refer)
         let urls = []
-        res.items.forEach(async (e) => {
-            const res = await getFile(e._location.path)
+
+        for(const e of res.items){
+            const res = await getFile_url(e._location.path)
             urls.push(res)
-        })
+        }
+
         return urls
     }catch(e){
         console.log(e)
@@ -55,7 +57,7 @@ export async function listFiles(path){
     }
 }
 
-export async function getFile(path){
+export async function getFile_url(path){
     try{
         const refer = ref(storage , path)
         const res = await getDownloadURL(refer)
@@ -65,4 +67,20 @@ export async function getFile(path){
         toast.error('حدثت مشكلة ما')
         return false
     }
+}
+
+export async function getFile_content (url) {
+    try{
+        const obj = await fetch(url) 
+        const res = await obj.json()
+        return res
+    }catch(e){
+        console.log(e)
+        toast.error('حدثت مشكلة ما')
+        return false
+    }
+} 
+
+export function error_handle () {
+    return toast.error('حدثت مشكلة ما')
 }

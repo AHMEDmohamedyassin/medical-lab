@@ -10,10 +10,6 @@ const InputCollectionComp = ({children , title , addable , addablePlaceholderTit
     mainDiv.current.querySelectorAll('input').forEach(element => {
       if(!element.value) return
       if(element.type == 'file') return
-
-      // if(mainDiv.current.querySelectorAll(`input[name="${element.name}"]`).length == 1)
-      //   return data[element.name] = element.value
-
       if(!element.name.includes('_array')) return data[element.name] = element.value
 
       if(data[element.name])
@@ -21,8 +17,7 @@ const InputCollectionComp = ({children , title , addable , addablePlaceholderTit
       else data[element.name] = [element.value]
     });
 
-    if(clickEvent)
-      clickEvent(data)
+    console.log(data)
   }
 
   return (

@@ -4,17 +4,16 @@ import InputCollectionComp from '../../components/InputCollectionComp'
 import InputComp from '../../components/InputComp'
 import PageContainerComp from '../../components/PageContainerComp'
 import ImageInputs from '../../components/ImageInputs'
+import ImageForm from '../../components/ImageForm'
 
 const page = () => {
-  const [data , setData] = useState(null)
-  useEffect(() => {
-    console.log(data)
-  } , [data])
 
   return (
       <PageContainerComp title={'معلومات عنا'}>
-        <InputCollectionComp >
-          <ImageInputs setImgs={setData} number={1} title={'إضافة صورة'} />
+        <ImageForm title={'صورة رقم رئيسية'} path={'/about/image_1'} />
+        <ImageForm title={'صورة رقم فرعية'} path={'/about/image_2'} />
+
+        <InputCollectionComp title={'البيانات'} >
           <InputComp name={'data_A'} label={'العنوان الرئيسي'} />
           <InputComp name={'data_B'} label={'الوصف'} />
           <InputComp name={'data_C'} label={'عنوان فرعي'} />
@@ -23,6 +22,7 @@ const page = () => {
           <InputComp name={'data_F'} label={'وصف المميزات'} />
           <InputComp name={'data_G'} label={'عدد ساعات العمل'} />
         </InputCollectionComp>
+        
       </PageContainerComp>
   )
 }
