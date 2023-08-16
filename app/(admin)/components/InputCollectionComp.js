@@ -3,7 +3,7 @@ import { uploadingString } from '@/app/firebase/storage'
 import React, { useRef, useState } from 'react'
 import { toast } from 'react-toastify'
 
-const InputCollectionComp = ({children , title , path , addable , addablePlaceholderTitle , addablePlaceholderValue , clickHandling}) => {
+const InputCollectionComp = ({children , title , path , addable , addablePlaceholderTitle , addablePlaceholderValue , clickHandling , clickJustEvent}) => {
   const mainDiv = useRef(null)
   const [inputCount , setInputCount] = useState(0)
 
@@ -21,6 +21,8 @@ const InputCollectionComp = ({children , title , path , addable , addablePlaceho
 
     if(Object.keys(data).length < 1) return toast.error('لا يوجد بيانات لإرسالها')
 
+    if(clickJustEvent) clickJustEvent()
+    
     if(clickHandling)
       return clickHandling(data)
 

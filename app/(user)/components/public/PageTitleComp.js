@@ -1,6 +1,8 @@
+import { getFile_url } from '@/app/firebase/storage'
 import React from 'react'
 
-const PageTitleComp = ({img , text}) => {
+const PageTitleComp = async ({ text , path}) => {
+  const img = await getFile_url(path)
   return (
         <div className='w-full py-16 px-10 relative z-20' style={{
                 backgroundImage:`url(${img})`,

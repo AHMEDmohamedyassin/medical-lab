@@ -5,7 +5,7 @@ import servicesHook from '../../hooks/servicesHook'
 import Loading from '../../loading'
 
 const page = () => {
-  const {services , get_services , loading_state} = servicesHook()
+  const {services , get_services , loading_state , deletingFileHandle} = servicesHook()
 
   useEffect(() =>{ 
     get_services() 
@@ -19,7 +19,7 @@ const page = () => {
           services.map((e , index) => (
             <div key={index} className='flex justify-between items-center border-[1px] hover:border-dsh hover:cursor-pointer p-4 w-full bg-white rounded text-dsh'>
               <p className='text-lg'>{e.title}</p>
-              <span className="material-symbols-outlined hover:text-red-500 hover:cursor-pointer">delete_forever</span>
+              <span onClick={(ele) => deletingFileHandle(e , ele)} className="material-symbols-outlined hover:text-red-500 hover:cursor-pointer">delete_forever</span>
             </div>
           ) )
         }

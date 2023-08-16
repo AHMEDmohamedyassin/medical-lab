@@ -4,20 +4,20 @@ import React from 'react'
 const FooterMiddle = () => {
   return (
     <>
-        <div className='w-full xl:w-[1170px] flex justify-between  items-center p-10 flex-col lg:flex-row gap-6'>
+        <div className='w-full xl:w-[1170px] flex justify-between  items-center p-10 flex-col lg:flex-row gap-6 z-20'>
             <div>
                 <h1 className='font-bold text-2xl text-main2 mb-6'>روابط مفيدة</h1>
                 <Link href={'/'} className='flex justify-start items-center gap-3 hover:cursor-pointer my-2'>
                     <span className="material-symbols-outlined text-main" style={{fontSize:20}}>arrow_back</span>
                     <p className='text-main2 font-bold hover:cursor-pointer hover:text-main'>الصفحة الرئيسية</p>
                 </Link>
-                <Link href={'/'} className='flex justify-start items-center gap-3 hover:cursor-pointer my-2'>
+                <Link href={'/contact'} className='flex justify-start items-center gap-3 hover:cursor-pointer my-2'>
                     <span className="material-symbols-outlined text-main" style={{fontSize:20}}>arrow_back</span>
-                    <p className='text-main2 font-bold hover:cursor-pointer hover:text-main'>الصفحة الرئيسية</p>
+                    <p className='text-main2 font-bold hover:cursor-pointer hover:text-main'>تواصل معنا</p>
                 </Link>
-                <Link href={'/'} className='flex justify-start items-center gap-3 hover:cursor-pointer my-2'>
+                <Link href={'/services'} className='flex justify-start items-center gap-3 hover:cursor-pointer my-2'>
                     <span className="material-symbols-outlined text-main" style={{fontSize:20}}>arrow_back</span>
-                    <p className='text-main2 font-bold hover:cursor-pointer hover:text-main'>الصفحة الرئيسية</p>
+                    <p className='text-main2 font-bold hover:cursor-pointer hover:text-main'>الخدمات</p>
                 </Link>
             </div>
 

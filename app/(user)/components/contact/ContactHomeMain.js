@@ -1,13 +1,15 @@
 import React from 'react'
 import ContactForm from './ContactForm'
+import { getFile_url } from '@/app/firebase/storage'
 
-const ContactHomeMain = () => {
+const ContactHomeMain = async() => {
+    const img = await getFile_url('/contact/image_1.jpg')
   return (
     <div className='w-full mt-20 mb-28 relative lg:h-[750px]  flex flex-col'>
 
 
         <div className='lg:centering_abs_freeX right-0 w-full lg:w-2/4 h-[540px] lg:h-full' style={{
-            backgroundImage:`url('https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
+            backgroundImage:`url('${img}')`,
             backgroundPosition:'center',
             backgroundSize:'cover'
         }}></div>

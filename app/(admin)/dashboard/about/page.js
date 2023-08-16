@@ -10,6 +10,7 @@ const page = () => {
 
   return (
       <PageContainerComp title={'معلومات عنا'}>
+        <ImageForm title={'صورة الصفحة'} path={'/about/about_page_image.jpg'} />
         <ImageForm title={'صورة رئيسية'} path={'/about/image_1.jpg'} />
         <ImageForm title={'صورة فرعية'} path={'/about/image_2.jpg'} />
 

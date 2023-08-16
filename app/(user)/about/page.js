@@ -6,7 +6,7 @@ import WhyUsAboutPageComp from '../components/About/WhyUsAboutPageComp'
 const page = () => {
   return (
     <>
-        <PageTitleComp text={'معلومات عنا'} img={'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=1600'}/>
+        <PageTitleComp text={'معلومات عنا'} path={'about/about_page_image.jpg'}/>
         <HomeAboutComp/>
         <WhyUsAboutPageComp/>
     </>

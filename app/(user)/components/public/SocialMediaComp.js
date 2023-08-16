@@ -1,20 +1,18 @@
+import { getFile_content, getFile_url } from '@/app/firebase/storage'
 import React from 'react'
 
-const SocialMediaComp = () => {
+const SocialMediaComp = async({raw}) => {
+    const url = await getFile_url('/contact/social_url.json')
+    const data = await getFile_content(url)
   return (
       <div className="flex justify-start items-center gap-x-4 px-1">
-          <a href={'/'}  className='rounded-full bg-white p-2 ' style={{boxShadow:'0 0 5px 1px #ddd'}}>
-              <img src="/icon/instegram.svg" className="w-4 h-4" />
-          </a>
-          <a href={'/'}  className='rounded-full bg-white p-2 ' style={{boxShadow:'0 0 5px 1px #ddd'}}>
-              <img src="/icon/instegram.svg" className="w-4 h-4" />
-          </a>
-          <a href={'/'}  className='rounded-full bg-white p-2 ' style={{boxShadow:'0 0 5px 1px #ddd'}}>
-              <img src="/icon/instegram.svg" className="w-4 h-4" />
-          </a>
-          <a href={'/'}  className='rounded-full bg-white p-2 ' style={{boxShadow:'0 0 5px 1px #ddd'}}>
-              <img src="/icon/instegram.svg" className="w-4 h-4" />
-          </a>
+        {
+            Object.keys(data).map((e , index) => (
+                <a key={index} href={`${data[e]}`}  className={!raw ? `rounded-full bg-white p-2 ` : 'mx-2'} style={{boxShadow:!raw ? '0 0 5px 1px #ddd' : ''}}>
+                    <img src={`/icon/${e}.svg`} className={`w-6 h-6`} />
+                </a>
+            ))
+        }
       </div>
   )
 }

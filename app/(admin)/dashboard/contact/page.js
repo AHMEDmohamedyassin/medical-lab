@@ -7,13 +7,11 @@ import ImageInputs from '../../components/ImageInputs'
 import ImageForm from '../../components/ImageForm'
 
 const page = () => {
-  const [socialMedia , setSocialMedia] = useState(null)
-  const [contact , setContact] = useState(null)
-  const [imgs , setImgs] = useState(null)
 
   return (
       <PageContainerComp title={'تواصل معنا'}>
 
+        <ImageForm title={'صورة الصفحة'} path={'/contact/contact_page_image.jpg'} />
         <ImageForm title={'الصورة الرئيسية'} path={'/contact/image_1.jpg'}  />
         <ImageForm title={'الصورة الفرعية'} path={'/contact/image_2.jpg'}  />
 
@@ -25,7 +23,8 @@ const page = () => {
 
         <InputCollectionComp path={'/contact/info.json'} title={'معلومات التواصل'} >
           <InputComp name={'email'} label={'البريد الإليكتروني'} />
-          <InputComp name={'workHours'} label={'مواعيد العمل'} />
+          <InputComp name={'phone'} label={'رقم الهاتف'} />
+          <InputComp name={'workingHours'} label={'مواعيد العمل'} />
         </InputCollectionComp>
 
       </PageContainerComp>

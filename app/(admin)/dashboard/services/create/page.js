@@ -1,4 +1,5 @@
 'use client'
+import ImageForm from '@/app/(admin)/components/ImageForm'
 import ImageInputs from '@/app/(admin)/components/ImageInputs'
 import InputCollectionComp from '@/app/(admin)/components/InputCollectionComp'
 import InputComp from '@/app/(admin)/components/InputComp'
@@ -10,6 +11,7 @@ const page = () => {
 
   return (
     <PageContainerComp title={'إنشاء خدمة'}>
+      <ImageForm title={'صورة الصفحة'} path={'/services/images/service_page_image.jpg'} />
       <ImageInputs title={'إضافة صورة'} number={1} setImgs={setImgs} />
       <InputCollectionComp clickHandling={clickHandle}>
         <input name={'img'} value={`/services/images/${name}.jpg`} type={'hidden'} />

@@ -6,10 +6,11 @@ import InputCollectionComp from '../components/InputCollectionComp'
 import InputComp from '../components/InputComp'
 import dashboardMainHook from '../hooks/dashboardMainHook'
 import ImageForm from '../components/ImageForm'
+import Loading from '../loading'
 
 const page = () => {
 
-  const {setSlide_imgs , clickEvent , allSliders} = dashboardMainHook()
+  const {setSlide_imgs , clickEvent , allSliders , delete_slider , loading_state} = dashboardMainHook()
 
   return (
     <PageContainerComp title={'الصفحةالرئيسية'}>
@@ -31,7 +32,7 @@ const page = () => {
                 allSliders.map((e , index) => (
                   <div key={index} className='flex justify-between items-center border-[1px] hover:border-dsh hover:cursor-pointer p-4 w-full bg-white rounded text-dsh'>
                     <p className='text-lg'>{e.title}</p>
-                    <span className="material-symbols-outlined hover:text-red-500 hover:cursor-pointer">delete_forever</span>
+                    <span onClick={(ele) => delete_slider(e , ele)} className="material-symbols-outlined hover:text-red-500 hover:cursor-pointer">delete_forever</span>
                   </div>
                 ))
               }
@@ -40,13 +41,9 @@ const page = () => {
           ) : null
         }
 
-      <PageContainerComp title={'صور الموقع'}>
-        <div className='flex flex-wrap justify-start items-center gap-6'>
-            <ImageForm title={'صورة خدماتنا'} path={'/images/service_page_image.jpg'} />
-            <ImageForm title={'صورة معلومات عنا'} path={'/images/about_page_image.jpg'} />
-            <ImageForm title={'صورة تواصل معنا'} path={'/images/contact_page_image.jpg'} />
-        </div>
-      </PageContainerComp>
+        {
+          loading_state ? <Loading/> :null
+        }
 
     </PageContainerComp>
   )
