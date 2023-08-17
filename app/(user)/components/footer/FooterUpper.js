@@ -4,7 +4,6 @@ import React from 'react'
 const FooterUpper = async () => {
     const url = await getFile_url('/places/main_place.json')
     const data = await getFile_content(url)
-    console.log(data)
   return (
     <>
         <div className='w-full xl:w-[1170px] flex justify-between items-start flex-wrap lg:flex-nowrap gap-16 p-10 z-20'>

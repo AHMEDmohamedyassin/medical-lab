@@ -72,6 +72,13 @@ const SideMenu = () => {
           </div>
         </div>
 
+        <Link href={'/dashboard/sliders'} className="w-full px-6 py-2 relative">
+          <div onClick={clickHandle} className="flex justify-start items-center gap-x-2 text-[#687384] hover:text-[#fff] hover:cursor-pointer w-full title_div">
+            <span className="material-symbols-outlined text-inherit">smart_display</span>
+            <div className="hidden lg:block text-lg text-inherit">الشرائح</div>
+          </div>
+        </Link>
+
 
     </div>
   )

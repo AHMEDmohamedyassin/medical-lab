@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import { randomName } from './methods'
 
-const dashboardMainHook = () => {
+const slidersHook = () => {
     
     const [allSliders , setAllSlider] = useState([])
     const [slide_imgs , setSlide_imgs] = useState(null)
@@ -77,4 +77,4 @@ const dashboardMainHook = () => {
     return {setSlide_imgs , clickEvent , allSliders , delete_slider , loading_state} 
 }
 
-export default dashboardMainHook
+export default slidersHook

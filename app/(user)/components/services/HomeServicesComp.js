@@ -40,7 +40,6 @@ const HomeServicesComp = () => {
       }
       setData(data)
 
-      if(count > data.length()) setCount(data.length())
     }catch(e){}
   }
 

@@ -1,6 +1,8 @@
 import Footer from './components/footer/Footer'
 import FixedEleComp from './components/public/FixedEleComp'
 import HeaderComp from './components/header/HeaderComp'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,6 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
       <body>
+        <ToastContainer/>
         <HeaderComp/>
         {children}
         <Footer/>
