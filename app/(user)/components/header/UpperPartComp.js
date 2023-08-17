@@ -37,7 +37,7 @@ const UpperPartComp = async() => {
             {
               content.email?(
                 <div className="flex items-center justify-between gap-2 border-e-[1px] border-e-sky-300 pe-4">
-                  <a href="tel:000-723-123-21" className="text-inherit">{content.email}</a>
+                  <a href={`mailto:${content.email}`} className="text-inherit">{content.email}</a>
                   <span className="material-symbols-outlined" style={{fontSize:18}}>mail</span>
                 </div>
               ):null
@@ -46,7 +46,7 @@ const UpperPartComp = async() => {
             {
               content.phone?(
                 <div className="flex items-center justify-between gap-2">
-                  <a className="text-inherit" href="tel:000-723-123-21">{content.phone}</a>
+                  <a className="text-inherit" href={`tel:+2${content.phone}`}>{content.phone}</a>
                   <span className="material-symbols-outlined" style={{fontSize:18}}>call</span>
                 </div>
               ):null

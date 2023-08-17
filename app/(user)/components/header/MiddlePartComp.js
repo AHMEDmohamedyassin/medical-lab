@@ -14,7 +14,6 @@ const MiddlePartComp = () => {
             <Link className="header_link relative px-2 py-8 hover:text-main focus:text-main" href={'/services'}>الخدمات</Link>
             <Link className="header_link relative px-2 py-8 hover:text-main focus:text-main" href={'/contact'}>تواصل معنا</Link>
             <Link className="header_link relative px-2 py-8 hover:text-main focus:text-main" href={'/about'}>معلومات عنا</Link>
-            <Link className="header_link relative px-2 py-8 hover:text-main focus:text-main" href={'/dashboard'}>لوحة التحكم</Link>
         </nav>
         {/* small screen menu button */}
         <div className="flex-1 xl:hidden py-8 hover:cursor-pointer">
