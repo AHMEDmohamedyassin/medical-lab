@@ -15,18 +15,12 @@ const page = () => {
 
   const router = useRouter()
 
-  useEffect(() => {
-    // onAuthStateChanged(auth , (user) => {
-    //   console.log(user?.uid)
-    // })
-  } , [])
-
   const clickHandle = async (type) => {
     try{
       setLoading(true)
       await register_func(email , pass , type)
       setLoading(false)
-      // if(type != 'reset') router.push('/dashboard')
+      if(type != 'reset') router.push('/dashboard')
     }catch(e){
 
     }
@@ -36,7 +30,6 @@ const page = () => {
       <body className='h-full flex justify-center items-start pt-20'>
         <ToastContainer/>
 
-        <button onClick={() => signOut(auth)}>تسجيل الخروح</button>
 
         <div className='flex flex-col justify-start items-center mx-auto w-3/4 flex-wrap'>
             <h1 className='w-full border-b-[1px] border-gray-200 pb-2 text-lg text-start font-bold'>إنشاء حساب / تسجيل دخول / تغير كلمة المرور</h1>
