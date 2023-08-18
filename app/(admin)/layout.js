@@ -7,15 +7,18 @@ import { auth } from "../firebase/config";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Loading from "./loading";
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function RootLayout({ children }) {
   const [loading , setLoading] = useState(true)
   const router = useRouter()
   useEffect(() => {
-    if(auth.currentUser == null) router.push('/')
-    else{
-      setLoading(false)
-    }
+    onAuthStateChanged(auth , user => {
+      if(user == null) router.push('/')
+      else{
+        setLoading(false)
+      }
+    })
   } , [])
   return (
     <body className="bg-[#f4f6f9] h-full relative">

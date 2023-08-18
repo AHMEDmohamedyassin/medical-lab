@@ -19,7 +19,8 @@ export const register_func = async (email , pass , type) => {
             toast.success('تم إرسال رابط تغيير كلمة المرور علي البريد الإلكتروني')
         }
     }catch(e){
-        if(type == 'createUser') toast.error('حدثت مشكة ما')
-        else if(type == 'login') toast.error('كلمة المرور غير صحيحة')
+        toast.error('حدثت مشكة ما الرجاء المحاولة لاحقا')
+        console.log(e)
+        return false
     }
 }

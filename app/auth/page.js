@@ -1,30 +1,36 @@
 'use client'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { register_func } from '../firebase/authentication'
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import { onAuthStateChanged, signOut } from 'firebase/auth'
-import { auth } from '../firebase/config'
 import { useRouter } from 'next/navigation'
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase/config';
 
 const page = () => {
-  const [email , setEmail] = useState(null)
-  const [pass , setPass] = useState(null)
+  const email = useRef(null)
+  const pass = useRef(null)
   const [loading , setLoading] = useState(false)
 
   const router = useRouter()
 
   const clickHandle = async (type) => {
+    if(email.current.value == '' || pass.current.value == '') return  toast.error('الرجاء ملئ الخانات المطلوبة')
     try{
       setLoading(true)
-      await register_func(email , pass , type)
+      const res = await register_func(email , pass , type)
       setLoading(false)
-      if(type != 'reset') router.push('/dashboard')
+      
+      if(type != 'reset' && res != false) router.push('/dashboard')
     }catch(e){
-
     }
   }
+
+  useEffect(() => {
+    onAuthStateChanged(auth , (user) => {
+      if(user != null) router.push('/dashboard')
+    }) 
+  } , [])
 
   return (
       <body className='h-full flex justify-center items-start pt-20'>
@@ -51,8 +57,8 @@ const page = () => {
 
               <div className='flex flex-col justify-between items-center w-full  xl:pe-20 xl:me-20'>
                   {/* <h1 className='xl:self-start font-bold mb-8'>إنشاء حساب</h1> */}
-                  <input onChange={(e) => setEmail(e.target.value)} className='mb-8 bg-transparent text-black text-sm border-0 border-b-[1px] border-gray-600 pb-2 w-full' type='email' placeholder='عوان البريد الإليكتروني' />
-                  <input onChange={(e) => setPass(e.target.value)} className='mb-8 bg-transparent text-black text-sm border-0 border-b-[1px] border-gray-600 pb-2 w-full' type='password' placeholder='كلمة السر' />
+                  <input ref={email} className='mb-8 bg-transparent text-black text-sm border-0 border-b-[1px] border-gray-600 pb-2 w-full' type='email' placeholder='عوان البريد الإليكتروني' />
+                  <input ref={pass} className='mb-8 bg-transparent text-black text-sm border-0 border-b-[1px] border-gray-600 pb-2 w-full' type='password' placeholder='كلمة السر' />
                   {
                     loading?(
                       <div className='bg-gray-500 text-white py-[10px] px-10 font-semibold text-sm w-full md:w-fit hover:cursor-not-allowed mt-4 text-center'>جاري التحميل</div>
