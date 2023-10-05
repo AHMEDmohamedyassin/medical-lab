@@ -6,6 +6,8 @@ export const metadata = {
   description: `معامل ميد سيرف للتحاليل الطبيه #نحن نهتم بصحتك وصحه أسرتك شعارنا دائما #الثقه  #الدقه #الجوده من اولوياتنا الحرص التام والكامل على خصوصيه المريض والاهتمام بكل التفاصيل البسيطه التى تؤدى الى نتائج عظيمه`,
 }
 
+export const revalidate = 0 // revalidate the data at most every hour
+
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir='rtl' className='h-full'>
