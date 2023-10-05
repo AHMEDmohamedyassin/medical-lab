@@ -32,7 +32,6 @@ const HomeAboutComp =async () => {
                       <p className='text-main2 font-light mt-4 text-start'>{content.data_E} </p>
 
                       <div className='flex items-center justify-center flex-wrap gap-4 mt-4'>
-                          <Link href={'/about'} className={`py-2 px-6 text-md font-semibold text-main border-main border-[1px] hover:text-white hover:bg-main`}>معلومات عنا</Link>
                           <Link href={'/services'} className={`py-2 px-6 text-md font-semibold text-main2 border-main2 border-[1px] hover:text-white hover:bg-main2`}>الخدمات</Link>
                       </div>
                   </div>

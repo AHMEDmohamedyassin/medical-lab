@@ -39,7 +39,6 @@ const ContactHome = async() => {
     
             </div>
     
-            <p className='text-white font-bold z-30 text-xl'>نحن هنا لخدمتك تواصل معنا علي 01066404523</p>
         </div>
       )
     }catch(e){

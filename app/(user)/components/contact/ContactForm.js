@@ -38,8 +38,8 @@ const ContactForm = () => {
     } , [])
   return (
             <div className='w-full lg:w-4/5 xl:w-3/5'>
-                <p className='text-main text-lg font-semibold z-40'>مستعدون للمساعدة</p>
-                <h1 className='text-main2 text-2xl sm:text-3xl xl:text-4xl font-extrabold z-40'>احصل على كتاب رعاية فني المختبر المناسب مع طبيبك</h1>
+                {/* <p className='text-main text-lg font-semibold z-40'>مستعدون للمساعدة</p> */}
+                <h1 className='text-main2 text-2xl sm:text-3xl xl:text-4xl font-extrabold z-40'>لحجز موعد زيارة</h1>
                 
                 <div className='flex justify-center items-center flex-col gap-6 mt-10'>
                     <div className='w-full flex justify-start items-center gap-4'>

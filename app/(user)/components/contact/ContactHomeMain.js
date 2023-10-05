@@ -30,10 +30,10 @@ const ContactHomeMain = async() => {
             </div>
     
     
-            <div className='lg:absolute -bottom-20 right-0 bg-main z-40 ps-20 py-10 pe-8 text-white w-full lg:w-2/5'>
+            {/* <div className='lg:absolute -bottom-20 right-0 bg-main z-40 ps-20 py-10 pe-8 text-white w-full lg:w-2/5'>
                 <p className='font-bold text-lg mb-2'>عروض مميزة</p>
                 <h2 className='text-4xl font-extrabold'>احصل علي فحص طبي مجانا</h2>
-            </div>
+            </div> */}
     
         </div>
       )
