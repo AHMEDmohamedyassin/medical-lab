@@ -19,8 +19,32 @@ export const register_func = async (email , pass , type) => {
             toast.success('تم إرسال رابط تغيير كلمة المرور علي البريد الإلكتروني')
         }
     }catch(e){
-        toast.error('حدثت مشكة ما الرجاء المحاولة لاحقا')
-        console.log(e)
+        // toast.error('حدثت مشكة ما الرجاء المحاولة لاحقا')
+        translateErrors(e)
+        // console.log(e)
         return false
+    }
+}
+
+
+function translateErrors (e){
+    if(e.code == 'auth/email-already-in-use'){
+        toast.error('البريد الإليكتروني مستخدم بالفعل')
+    }
+    else if(e.code == 'auth/weak-password'){
+        toast.error('كلمة المرور ضعيفة')
+    }
+    else if(e.code == 'auth/user-not-found'){
+        toast.error('الحساب غير موجد')
+    }
+    else if(e.code == 'auth/invalid-email'){
+        toast.error('الرجاء إدخال بريد إليكتروني صالح')
+    }
+    else if(e.code == 'auth/wrong-password'){
+        toast.error('كلمة المرور غير صحيحة')
+    }
+    else{
+        toast.error('حدث خطأ ما الرجاء إعادة المحاولة')
+        toast.error(e.code.replaceAll('auth/' , '').replaceAll('-' , ' '))
     }
 }

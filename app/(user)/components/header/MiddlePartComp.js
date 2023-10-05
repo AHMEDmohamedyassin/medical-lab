@@ -33,7 +33,6 @@ const MiddlePartComp = () => {
         <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/services'}>الخدمات</Link>
         <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/contact'}>تواصل معنا</Link>
         <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/about'}>معلومات عنا</Link>
-        <Link className="py-4 border-b-[1px] border-gray-200 w-full" href={'/dashboard'}>لوحة التحكم</Link>
       </div>
     </div>
   )
