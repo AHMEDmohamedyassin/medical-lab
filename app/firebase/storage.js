@@ -52,7 +52,7 @@ export async function listFiles_url(path){
         return urls
     }catch(e){
         console.log(e)
-        toast.error('حدثت مشكلة ما')
+        // toast.error('حدثت مشكلة ما')
         return false
     }
 }
@@ -64,7 +64,7 @@ export async function getFile_url(path){
         return res
     }catch(e){
         console.log(e)
-        toast.error('حدثت مشكلة ما')
+        // toast.error('حدثت مشكلة ما')
         return false
     }
 }
@@ -76,7 +76,7 @@ export async function getFile_content (url) {
         return res
     }catch(e){
         console.log(e)
-        toast.error('حدثت مشكلة ما')
+        // toast.error('حدثت مشكلة ما')
         return false
     }
 } 
